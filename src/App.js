@@ -38,24 +38,52 @@ export default () => {
 
         <Switch>
           {/* This Component will load the Courses and show them using the Courses Component  */}
-          <Route exact path="/" component={CoursesWithContext} />
-          <PrivateRoute path="/settings" component={UserDetailsWithContext} />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + "/"}
+            component={CoursesWithContext}
+          />
+          <PrivateRoute
+            path={process.env.PUBLIC_URL + "/settings"}
+            component={UserDetailsWithContext}
+          />
           {/* <PrivateRoute path="/settings" component={AuthWithContext} /> */}
           <PrivateRoute
-            path="/courses/create"
+            path={process.env.PUBLIC_URL + "/courses/create"}
             component={CreateCourseWithContext}
           />
           <PrivateRoute
-            path="/courses/:id/update"
+            path={process.env.PUBLIC_URL + "/courses/:id/update"}
             component={UpdateCourseWithContext}
           />
-          <Route path="/courses/:id" component={CourseDetailWithContext} />
-          <Route path="/signup" component={UserSignUpWithContext} />
-          <Route path="/signin" component={UserSignInWithContext} />
-          <PrivateRoute path="/signout" component={UserSignOutWithContext} />
-          <Route path="/forbidden" component={Forbidden} />
-          <Route path="/error" component={UnhandledError} />
-          <Route path="/notfound" component={NotFound} />
+          <Route
+            path={process.env.PUBLIC_URL + "/courses/:id"}
+            component={CourseDetailWithContext}
+          />
+          <Route
+            path={process.env.PUBLIC_URL + "/signup"}
+            component={UserSignUpWithContext}
+          />
+          <Route
+            path={process.env.PUBLIC_URL + "/signin"}
+            component={UserSignInWithContext}
+          />
+          <PrivateRoute
+            path={process.env.PUBLIC_URL + "/signout"}
+            component={UserSignOutWithContext}
+          />
+          <Route
+            path={process.env.PUBLIC_URL + "/forbidden"}
+            component={Forbidden}
+          />
+          <Route
+            path={process.env.PUBLIC_URL + "/error"}
+            component={UnhandledError}
+          />
+          <Route
+            path={process.env.PUBLIC_URL + "/notfound"}
+            component={NotFound}
+          />
           <Route component={NotFound} />
         </Switch>
       </div>

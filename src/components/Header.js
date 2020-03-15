@@ -13,17 +13,17 @@ const Header = props => {
     <div className="header">
       <div className="bounds">
         <h1 className="header--logo">
-          <Link to="/">Courses</Link>
+          <Link to={process.env.PUBLIC_URL + "/"}>Courses</Link>
         </h1>
         <nav>
           {authUser ? (
             <React.Fragment>
-              <Link to="/settings">
+              <Link to={process.env.PUBLIC_URL + "/settings"}>
                 <span>
                   Welcome, {authUser.firstName} {authUser.lastName}!
                 </span>
               </Link>
-              <Link to="/signout">Sign Out</Link>
+              <Link to={process.env.PUBLIC_URL + "/signout"}>Sign Out</Link>
             </React.Fragment>
           ) : (
             <React.Fragment>

@@ -90,7 +90,8 @@ export default class UserSignIn extends React.Component {
           />
           <p>&nbsp;</p>
           <p>
-            Don't have a user account? <Link to="signup">Click here</Link> to
+            Don't have a user account?{" "}
+            <Link to={process.env.PUBLIC_URL + "/signup"}>Click here</Link> to
             sign up!
           </p>
         </div>

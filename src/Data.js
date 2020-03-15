@@ -44,7 +44,7 @@ export default class Data {
     } else if (response.status === 401) {
       return null;
     } else if (response.status === 500) {
-      return <Redirect to={{ pathname: "/error" }} />;
+      return <Redirect to={{ pathname: process.env.PUBLIC_URL + "/error" }} />;
     } else {
       throw new Error();
     }
@@ -59,7 +59,7 @@ export default class Data {
         return data.errors;
       });
     } else if (response.status === 500) {
-      return <Redirect to={{ pathname: "/error" }} />;
+      return <Redirect to={{ pathname: process.env.PUBLIC_URL + "/error" }} />;
     } else {
       throw new Error();
     }
@@ -72,7 +72,7 @@ export default class Data {
     } else if (response.status === 401) {
       return null;
     } else if (response.status === 500) {
-      return <Redirect to={{ pathname: "/error" }} />;
+      return <Redirect to={{ pathname: process.env.PUBLIC_URL + "/error" }} />;
     } else {
       throw new Error();
     }
@@ -103,7 +103,7 @@ export default class Data {
     } else if (response.status === 401) {
       return null;
     } else if (response.status === 500) {
-      return <Redirect to={{ pathname: "/error" }} />;
+      return <Redirect to={{ pathname: process.env.PUBLIC_URL + "/error" }} />;
     } else {
       throw new Error();
     }
@@ -122,11 +122,11 @@ export default class Data {
       }
     );
     if (response.status === 204) {
-      return <Redirect to={{ pathname: "/" }} />;
+      return <Redirect to={{ pathname: process.env.PUBLIC_URL + "/" }} />;
     } else if (response.status === 401) {
       return null;
     } else if (response.status === 500) {
-      return <Redirect to={{ pathname: "/error" }} />;
+      return <Redirect to={{ pathname: process.env.PUBLIC_URL + "/error" }} />;
     } else {
       throw new Error();
     }

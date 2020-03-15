@@ -132,7 +132,8 @@ export default class UserSignUp extends React.Component {
           />
           <p>&nbsp;</p>
           <p>
-            Already have a user account? <Link to="/signin">Click here</Link> to
+            Already have a user account?{" "}
+            <Link to={process.env.PUBLIC_URL + "/signin"}>Click here</Link> to
             sign in!
           </p>
         </div>

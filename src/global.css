@@ -775,7 +775,7 @@ input:focus {
 
 /* line 522, ../sass/global.sass */
 .button:not(.button-secondary):hover {
-  background: #63537d;
+  background: #3aa951;
 }
 
 /* line 525, ../sass/global.sass */
@@ -793,9 +793,9 @@ input:focus {
 
 /* line 530, ../sass/global.sass */
 .button-secondary:hover {
-  color: #63537d;
-  -webkit-box-shadow: 0 0 0 2px #63537d inset;
-          box-shadow: 0 0 0 2px #63537d inset;
+  color: #3aa951;
+  -webkit-box-shadow: 0 0 0 2px #3aa951 inset;
+          box-shadow: 0 0 0 2px #3aa951 inset;
 }
 
 /* adds additional padding to the bottom of an element */

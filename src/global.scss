@@ -4,6 +4,7 @@ $base-color: #2d833f;
 $base-text-color: #fff;
 $label-text-color: rgba(255, 255, 255, 0.5);
 $hover-color: #444;
+$hover-accent-color: lighten($base-color, 10%);
 $course-owner-name: lighten($base-color, 10%);
 
 /* line 7, ../sass/reset.sass */
@@ -716,7 +717,7 @@ input:focus {
 }
 /* line 522, ../sass/global.sass */
 .button:not(.button-secondary):hover {
-  background: #63537d;
+  background: $hover-accent-color;
 }
 
 /* line 525, ../sass/global.sass */
@@ -732,8 +733,8 @@ input:focus {
 }
 /* line 530, ../sass/global.sass */
 .button-secondary:hover {
-  color: #63537d;
-  box-shadow: 0 0 0 2px #63537d inset;
+  color: $hover-accent-color;
+  box-shadow: 0 0 0 2px $hover-accent-color inset;
 }
 
 /* adds additional padding to the bottom of an element */

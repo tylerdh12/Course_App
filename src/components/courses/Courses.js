@@ -2,7 +2,7 @@ import React from "react";
 import config from "../../config";
 import Course from "./Course";
 
-const Courses = ({ history }) => {
+const Courses = ({ navigation }) => {
   const [courses, updateCourses] = React.useState([]);
   const [errors, updateErrors] = React.useState("");
   const [loading, setLoading] = React.useState(false);
@@ -13,7 +13,7 @@ const Courses = ({ history }) => {
       .then((res) => {
         if (res.status === 500) {
           updateErrors("500");
-          history.push("/error");
+          errors && console.log(errors);
         } else {
           return res.json();
         }
@@ -22,7 +22,7 @@ const Courses = ({ history }) => {
         updateCourses(data);
         setLoading(false);
       });
-  }, []);
+  }, [navigation, errors]);
 
   return loading ? (
     <div

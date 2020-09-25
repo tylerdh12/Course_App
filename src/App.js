@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CourseDetail from "./components/courses/CourseDetail";
 import Courses from "./components/courses/Courses";
@@ -29,12 +28,7 @@ const UserSignUpWithContext = withContext(UserSignUp);
 const UserSignInWithContext = withContext(UserSignIn);
 const UserSignOutWithContext = withContext(UserSignOut);
 
-export default () => {
-  useEffect(() => {
-    ReactGA.initialize("UA-179034832-1");
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
+const App = () => {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div>
@@ -66,3 +60,5 @@ export default () => {
     </Router>
   );
 };
+
+export default App;

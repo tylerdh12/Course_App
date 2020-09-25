@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // user's first and last name and a button for signing out (if there's an
 // authenticated user).
 
-const Header = props => {
+const Header = (props) => {
   const { context } = props;
   const authUser = context.authenticatedUser;
   return (
@@ -27,10 +27,10 @@ const Header = props => {
             </React.Fragment>
           ) : (
             <React.Fragment>
-              <a className="signup" href="signup">
+              <a className="signup" href="/signup">
                 Sign Up
               </a>
-              <a className="signin" href="signin">
+              <a className="signin" href="/signin">
                 Sign In
               </a>
             </React.Fragment>

@@ -1,23 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReactGA from "react-ga";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-// Import Components
-import Header from "./components/Header";
-import PrivateRoute from "./PrivateRoute";
-import UserDetails from "./components/user/UserDetails";
+import CourseDetail from "./components/courses/CourseDetail";
 import Courses from "./components/courses/Courses";
 import CreateCourse from "./components/courses/CreateCourse";
 import UpdateCourse from "./components/courses/UpdateCourse";
-import CourseDetail from "./components/courses/CourseDetail";
-import UserSignUp from "./components/user/UserSignUp";
+import Forbidden from "./components/Forbidden";
+// Import Components
+import Header from "./components/Header";
+import NotFound from "./components/NotFound";
+import UnhandledError from "./components/UnhandledError";
+import UserDetails from "./components/user/UserDetails";
 import UserSignIn from "./components/user/UserSignIn";
 import UserSignOut from "./components/user/UserSignOut";
-import Forbidden from "./components/Forbidden";
-import UnhandledError from "./components/UnhandledError";
-import NotFound from "./components/NotFound";
-
+import UserSignUp from "./components/user/UserSignUp";
 //Import With Context
 import withContext from "./Context";
+import PrivateRoute from "./PrivateRoute";
 
 // Connect Course to context
 const HeaderWithContext = withContext(Header);
@@ -31,6 +30,11 @@ const UserSignInWithContext = withContext(UserSignIn);
 const UserSignOutWithContext = withContext(UserSignOut);
 
 export default () => {
+  useEffect(() => {
+    ReactGA.initialize("G-ZZ4R3M6EW2");
+    ReactGA.pageview("/");
+  }, []);
+
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div>

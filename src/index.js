@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./global.css";
-
-import { Provider } from "./Context";
 import App from "./App";
+import { Provider } from "./Context";
+import "./global.css";
 
 ReactDOM.render(
   <Provider>

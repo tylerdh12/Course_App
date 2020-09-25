@@ -31,7 +31,7 @@ const UserSignOutWithContext = withContext(UserSignOut);
 
 export default () => {
   useEffect(() => {
-    ReactGA.initialize("G-ZZ4R3M6EW2");
+    ReactGA.initialize("UA-179034832-1");
     ReactGA.pageview("/");
   }, []);
 
